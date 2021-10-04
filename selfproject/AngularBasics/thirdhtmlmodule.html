@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="/script3.js"></script>
+</head>
+<body ng-app="myThirdModule" style="font-family: Arial, Helvetica, sans-serif; background-color: aquamarine;">
+    <div ng-controller="myThirdController">
+        <table>
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Capital</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="person in persons">
+                <td>{{person.firstName}}</td>
+                <td>{{person.lastName}}</td>
+                <td>{{person.capital}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+</body>
+</html>

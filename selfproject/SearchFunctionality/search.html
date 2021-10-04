@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search-Function AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="/selfproject/SearchFunctionality/searchFunction.js"></script>
+    <link rel="stylesheet" href="/selfproject/SearchFunctionality/searchStyling.css">
+</head>
+<body ng-app="searchModule" style="font-family: Arial, Helvetica, sans-serif;">
+    <div ng-controller="searchController">
+        Search: <input type="text" name="" id="" placeholder="search City & names" ng-model="searchText"><br/>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tableData in tableDatas | filter:searchText">
+                    <td>{{ tableData.name }}</td>
+                    <td>{{ tableData.Gender }}</td>
+                    <td>{{ tableData.City }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="mySecondModule">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="/script2.js"></script>
+</head>
+<body ng-controller="mySecondController" >
+    <div>
+        <div>Name: {{country.name }}</div>
+        <div>Capital: {{country.capital }}</div>
+        <div>
+            <!-- There are two request made to get the img first we got the 404 error then we get, After the binding expression is evaluated then we get the correct pathof img "ng-src" make sure that the data willbe fetched afer the binding has been evaluated-->
+        <img ng-src="{{ country.flag }}" alt="{{country.name + 'quote'}}" height="200px" width="200px">
+        </div>
+    </div>
+    <div ng-app=""> {{ message}}</div>
+</body>
+</html>

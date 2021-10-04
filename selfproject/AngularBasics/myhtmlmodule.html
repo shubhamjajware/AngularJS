@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="/script.js"></script>
+</head>
+<body ng-controller="myController">
+    <div>
+        <img src="/chanakya.jpg" alt="" height="200px" width="200px">
+    </div>
+    <div>
+        {{ message }}
+    </div>
+    <div>
+        10 + 20 = {{10+20}}<br>
+        {{ message }}
+    </div>
+    <div>
+        FirstName: {{ employee.firstName}}
+    </div>
+    <div>LastName: {{employee.lastName}}</div>
+    <div>Gender: {{employee.gender}}</div>
+</body>
+</html>
